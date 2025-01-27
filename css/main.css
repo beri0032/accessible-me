@@ -1,16 +1,12 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f9f9f9;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
@@ -22,6 +18,23 @@ h6 {
 
 img {
   width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 .main-nav ul {
@@ -39,9 +52,15 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #000;
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+  background-color: #ddd;
 }
 
 form input,
@@ -49,23 +68,33 @@ form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 form textarea {
-  min-height: 150px;
-  max-height: 150px;
-  height: 150px;
   resize: none;
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
+  background: #000;
+  color: #fff;
+  border: none;
   padding: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+  background: #444;
 }
 
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
 }
